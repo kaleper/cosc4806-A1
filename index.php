@@ -2,9 +2,10 @@
 session_start();
 
 // If user is not authenticated, redirects to login page
-  if ($_SESSION['authenticated'] != 1) {
-    header ('location: /login.php');
-  }; 
+  if (isset($_SESSION['authenticated']) && $_SESSION['authenticated'] != 1) {
+        header ('location: /login.php');
+        exit;
+      }
 ?>
 
 
@@ -20,4 +21,8 @@ session_start();
     <p><a href="/login.php">Login</a></p>
     <p> Welcome, <?=$_SESSION['username'];?> </p>
   </body>
+
+  <footer>
+      <p> <a href="/logout.php">Log Out</p>
+  </footer>
 </html>

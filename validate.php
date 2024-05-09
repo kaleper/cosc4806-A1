@@ -6,9 +6,9 @@
   // Hardcoded credentials
   $validUsername = "kalen";
   $validPassword = "replit";
-  // Initially, user is not authenticated
+  // Initially, user is not authenticated with no failed login attempts
   $_SESSION['authenticated'] = 0;
-  
+
 
   // Pulls credentials from login.php form
   $username = $_REQUEST['username']; 
@@ -27,6 +27,7 @@
     } else {
       $_SESSION['failedAttempts']++;
     }
-      echo "Invalid credentials entered. Number of failed login attempts: " . $_SESSION['failedAttempts'];
+
+      header ('location: /login.php');
   }
 ?>
