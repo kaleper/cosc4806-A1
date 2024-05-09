@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -8,6 +11,6 @@
     <h1>Assignment 1</h1>
 
     <p><a href="/login.php">Login</a></p>
-    
+    <p> Welcome, <?=$_SESSION['username'];?> </p>
   </body>
 </html>
