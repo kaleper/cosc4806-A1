@@ -1,6 +1,13 @@
 <?php
 session_start();
+
+// If user is not authenticated, redirects to login page
+  if ($_SESSION['authenticated'] != 1) {
+    header ('location: /login.php');
+  }; 
 ?>
+
+
 <!DOCTYPE html>
 <html>
   <head>
