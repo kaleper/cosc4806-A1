@@ -2,7 +2,7 @@
   session_start();
   
   // If user is not authenticated, redirects to login page
-    if (isset($_SESSION['authenticated']) && $_SESSION['authenticated'] != 1) {
+    if (!isset($_SESSION['authenticated'])) {
       header ('location: /login.php');
       // Exits script after redirecting
       exit;
