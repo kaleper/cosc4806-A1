@@ -1,7 +1,8 @@
 <?php
 session_start();
 
-  if (isset($_SESSION['failedAttempts']) && $_SESSION['failedAttempts'] > 0) {
+if (isset($_SESSION['failedAttempts'])) {
+ // if (isset($_SESSION['failedAttempts']) && $_SESSION['failedAttempts'] > 0) {
      echo "<p>
             Invalid credentials entered. 
             Number of failed login attempts: " . $_SESSION['failedAttempts'] .
