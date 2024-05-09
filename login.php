@@ -1,13 +1,13 @@
 <?php
-session_start();
-
-if (isset($_SESSION['failedAttempts'])) {
- // if (isset($_SESSION['failedAttempts']) && $_SESSION['failedAttempts'] > 0) {
+  session_start();
+  
+  // Displays invalid login attempts, if any
+  if (isset($_SESSION['failedAttempts'])) {
      echo "<p>
             Invalid credentials entered. 
             Number of failed login attempts: " . $_SESSION['failedAttempts'] .
           "</p>";
-  }; 
+    };
 ?>
 
 <!DOCTYPE html>
@@ -16,9 +16,9 @@ if (isset($_SESSION['failedAttempts'])) {
     <title>Login</title>
   </head>
   <body>
-
     <h1>Login</h1>
-
+    
+    <!-- Form to enter login credentials  -->
     <form action ="/validate.php" method="post">
       <label for="username">Username</label>
       <br>

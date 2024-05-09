@@ -1,32 +1,27 @@
 <?php
-session_start();
-
-// If user is not authenticated, redirects to login page
-  if (isset($_SESSION['authenticated']) && $_SESSION['authenticated'] != 1) {
-        header ('location: /login.php');
-        exit;
-      }
+  session_start();
+  
+  // If user is not authenticated, redirects to login page
+    if (isset($_SESSION['authenticated']) && $_SESSION['authenticated'] != 1) {
+      header ('location: /login.php');
+      // Exits script after redirecting
+      exit;
+    }
 ?>
-
 
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Assignment 1</title>
+    <title>Homepage</title>
   </head>
   <body>
-    
-    <h1>Assignment 1</h1>
-
-    
+    <h1>Homepage</h1>
+      <!-- Greets user -->
       <p> Welcome, <?=$_SESSION['username'];?> </p>
-   
-    
   </body>
 
   <footer>
-   
+      <!-- Redirects to logout page that destroys session -->
       <p> <a href="/logout.php">Log Out</p>
-  
   </footer>
 </html>
