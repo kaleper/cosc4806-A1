@@ -17,7 +17,9 @@
   <body>
     <h1>Homepage</h1>
       <!-- Greets user -->
-      <p> Welcome, <?=$_SESSION['username'];?> </p>
+      <p> Welcome, <?=$_SESSION['username'];?>. </p>
+      <!-- Formats date in a readable way -->
+      <p> <?php echo "Today is " . date("l, F d, y.");?> </p>
   </body>
 
   <footer>

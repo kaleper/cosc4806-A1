@@ -7,7 +7,7 @@
             Invalid credentials entered. 
             Number of failed login attempts: " . $_SESSION['failedAttempts'] .
           "</p>";
-    };
+    }; 
 ?>
 
 <!DOCTYPE html>
@@ -16,8 +16,8 @@
     <title>Login</title>
   </head>
   <body>
+
     <h1>Login</h1>
-    
     <!-- Form to enter login credentials  -->
     <form action ="/validate.php" method="post">
       <label for="username">Username</label>
