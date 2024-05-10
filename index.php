@@ -19,7 +19,7 @@
       <!-- Greets user -->
       <p> Welcome, <?=$_SESSION['username'];?>. </p>
       <!-- Formats date in a readable way -->
-      <p> <?php echo "Today is " . date("l, F d, y.");?> </p>
+      <p> <?php echo "Today is " . date("l, F d, Y.");?> </p>
   </body>
 
   <footer>

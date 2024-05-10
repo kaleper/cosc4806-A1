@@ -2,12 +2,12 @@
   session_start();
 
 
-// If user is already logged in, redirects to index.php
-if (isset($_SESSION['authenticated'])) {
-  header ("location:/");
-  // Exits script after redirecting
-  exit;
-}
+  // If user is already logged in, redirects to index.php
+  if (isset($_SESSION['authenticated'])) {
+    header ("location:/");
+    // Exits script after redirecting
+    exit;
+  }
 
   // Displays invalid login attempts, if any
   if (isset($_SESSION['failedAttempts'])) {
